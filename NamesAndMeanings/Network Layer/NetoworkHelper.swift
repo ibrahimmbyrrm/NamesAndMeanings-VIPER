@@ -24,5 +24,6 @@ enum HTTPError : String, Error {
 struct NetworkHelper {
     static let shared = NetworkHelper()
     
-    let headers = ["Authorization": "Bearer 2viCCAlwvfui9gbuK2auPf8d6GdryI78dlkYNVQe5JwLaAoots1Z2VDSzld0"]
+    let headers = ["Authorization"     :
+                    "Bearer W79uqXoSBrPp2566ZvFFvOoIhVDnHuSkzIDOZ1jWIBQ3u8feQ5e7z4DGo3uK"]
 }

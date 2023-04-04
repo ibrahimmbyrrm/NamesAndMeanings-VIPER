@@ -53,16 +53,14 @@ class ListView : UIViewController, AnyView {
         NSLayoutConstraint.activate([
             searchBar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             searchBar.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            searchBar.trailingAnchor.constraint(equalTo: view.trailingAnchor)
-        ])
-        NSLayoutConstraint.activate([
+            searchBar.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            
             tableView.topAnchor.constraint(equalTo: searchBar.bottomAnchor),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
-
     func update(with list: [Attributes]) {
         DispatchQueue.main.async {
             self.names = list
@@ -91,6 +89,13 @@ extension ListView : UITableViewDelegate , UITableViewDataSource, UISearchBarDel
         }else {
             return names.count
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        var routerInstance = DetailRouter.viewDidChanged()
+        var selectedSlug = names[indexPath.row].slug
+        DetailView.selected = selectedSlug
+        present(routerInstance.secondView!, animated: true)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

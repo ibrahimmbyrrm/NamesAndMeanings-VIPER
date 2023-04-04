@@ -15,6 +15,9 @@ struct Attributes : Codable {
     let name : String
     let slug : String
     let meaning : String?
+    let gender : String?
+    let origin : String?
+    let kuran : Bool?
 }
 
 

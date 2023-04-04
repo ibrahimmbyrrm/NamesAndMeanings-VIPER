@@ -9,21 +9,31 @@
 /* Begin PBXBuildFile section */
 		8035CB9429DC3C5C00F03E02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8035CB9329DC3C5C00F03E02 /* AppDelegate.swift */; };
 		8035CB9629DC3C5C00F03E02 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8035CB9529DC3C5C00F03E02 /* SceneDelegate.swift */; };
-		8035CB9829DC3C5C00F03E02 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8035CB9729DC3C5C00F03E02 /* ViewController.swift */; };
-		8035CB9B29DC3C5C00F03E02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8035CB9929DC3C5C00F03E02 /* Main.storyboard */; };
 		8035CB9D29DC3C5D00F03E02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8035CB9C29DC3C5D00F03E02 /* Assets.xcassets */; };
 		8035CBA029DC3C5D00F03E02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8035CB9E29DC3C5D00F03E02 /* LaunchScreen.storyboard */; };
+		8035CBAC29DC3CC600F03E02 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8035CBAB29DC3CC600F03E02 /* ListView.swift */; };
+		8035CBAE29DC3CCC00F03E02 /* ListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8035CBAD29DC3CCC00F03E02 /* ListInteractor.swift */; };
+		8035CBB029DC3CD200F03E02 /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8035CBAF29DC3CD200F03E02 /* ListPresenter.swift */; };
+		8035CBB229DC3CE200F03E02 /* ListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8035CBB129DC3CE200F03E02 /* ListEntity.swift */; };
+		8035CBB429DC3CE900F03E02 /* ListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8035CBB329DC3CE900F03E02 /* ListRouter.swift */; };
+		8035CBB829DC3FAB00F03E02 /* NetoworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8035CBB729DC3FAB00F03E02 /* NetoworkHelper.swift */; };
+		8035CBBA29DC407200F03E02 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8035CBB929DC407200F03E02 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8035CB9029DC3C5C00F03E02 /* NamesAndMeanings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NamesAndMeanings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8035CB9329DC3C5C00F03E02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8035CB9529DC3C5C00F03E02 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8035CB9729DC3C5C00F03E02 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8035CB9A29DC3C5C00F03E02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8035CB9C29DC3C5D00F03E02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8035CB9F29DC3C5D00F03E02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8035CBA129DC3C5D00F03E02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8035CBAB29DC3CC600F03E02 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		8035CBAD29DC3CCC00F03E02 /* ListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInteractor.swift; sourceTree = "<group>"; };
+		8035CBAF29DC3CD200F03E02 /* ListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
+		8035CBB129DC3CE200F03E02 /* ListEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEntity.swift; sourceTree = "<group>"; };
+		8035CBB329DC3CE900F03E02 /* ListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRouter.swift; sourceTree = "<group>"; };
+		8035CBB729DC3FAB00F03E02 /* NetoworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetoworkHelper.swift; sourceTree = "<group>"; };
+		8035CBB929DC407200F03E02 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +66,60 @@
 		8035CB9229DC3C5C00F03E02 /* NamesAndMeanings */ = {
 			isa = PBXGroup;
 			children = (
+				8035CBB529DC3F9D00F03E02 /* Network Layer */,
+				8035CBA729DC3CA500F03E02 /* Modules */,
 				8035CB9329DC3C5C00F03E02 /* AppDelegate.swift */,
 				8035CB9529DC3C5C00F03E02 /* SceneDelegate.swift */,
-				8035CB9729DC3C5C00F03E02 /* ViewController.swift */,
-				8035CB9929DC3C5C00F03E02 /* Main.storyboard */,
 				8035CB9C29DC3C5D00F03E02 /* Assets.xcassets */,
 				8035CB9E29DC3C5D00F03E02 /* LaunchScreen.storyboard */,
 				8035CBA129DC3C5D00F03E02 /* Info.plist */,
 			);
 			path = NamesAndMeanings;
+			sourceTree = "<group>";
+		};
+		8035CBA729DC3CA500F03E02 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				8035CBA929DC3CB000F03E02 /* NameDetail */,
+				8035CBA829DC3CA800F03E02 /* NamesList */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		8035CBA829DC3CA800F03E02 /* NamesList */ = {
+			isa = PBXGroup;
+			children = (
+				8035CBAB29DC3CC600F03E02 /* ListView.swift */,
+				8035CBAD29DC3CCC00F03E02 /* ListInteractor.swift */,
+				8035CBAF29DC3CD200F03E02 /* ListPresenter.swift */,
+				8035CBB129DC3CE200F03E02 /* ListEntity.swift */,
+				8035CBB329DC3CE900F03E02 /* ListRouter.swift */,
+			);
+			path = NamesList;
+			sourceTree = "<group>";
+		};
+		8035CBA929DC3CB000F03E02 /* NameDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NameDetail;
+			sourceTree = "<group>";
+		};
+		8035CBB529DC3F9D00F03E02 /* Network Layer */ = {
+			isa = PBXGroup;
+			children = (
+				8035CBB629DC3FA100F03E02 /* Core */,
+			);
+			path = "Network Layer";
+			sourceTree = "<group>";
+		};
+		8035CBB629DC3FA100F03E02 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				8035CBB729DC3FAB00F03E02 /* NetoworkHelper.swift */,
+				8035CBB929DC407200F03E02 /* NetworkManager.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +182,6 @@
 			files = (
 				8035CBA029DC3C5D00F03E02 /* LaunchScreen.storyboard in Resources */,
 				8035CB9D29DC3C5D00F03E02 /* Assets.xcassets in Resources */,
-				8035CB9B29DC3C5C00F03E02 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +192,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8035CB9829DC3C5C00F03E02 /* ViewController.swift in Sources */,
+				8035CBBA29DC407200F03E02 /* NetworkManager.swift in Sources */,
+				8035CBB829DC3FAB00F03E02 /* NetoworkHelper.swift in Sources */,
+				8035CBB229DC3CE200F03E02 /* ListEntity.swift in Sources */,
+				8035CBB429DC3CE900F03E02 /* ListRouter.swift in Sources */,
+				8035CBB029DC3CD200F03E02 /* ListPresenter.swift in Sources */,
 				8035CB9429DC3C5C00F03E02 /* AppDelegate.swift in Sources */,
 				8035CB9629DC3C5C00F03E02 /* SceneDelegate.swift in Sources */,
+				8035CBAE29DC3CCC00F03E02 /* ListInteractor.swift in Sources */,
+				8035CBAC29DC3CC600F03E02 /* ListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8035CB9929DC3C5C00F03E02 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8035CB9A29DC3C5C00F03E02 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8035CB9E29DC3C5D00F03E02 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,7 +344,6 @@
 				INFOPLIST_FILE = NamesAndMeanings/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,7 +371,6 @@
 				INFOPLIST_FILE = NamesAndMeanings/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

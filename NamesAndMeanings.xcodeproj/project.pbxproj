@@ -108,18 +108,10 @@
 		8035CBB529DC3F9D00F03E02 /* Network Layer */ = {
 			isa = PBXGroup;
 			children = (
-				8035CBB629DC3FA100F03E02 /* Core */,
+				8035CBB929DC407200F03E02 /* NetworkManager.swift */,
+				8035CBB729DC3FAB00F03E02 /* NetoworkHelper.swift */,
 			);
 			path = "Network Layer";
-			sourceTree = "<group>";
-		};
-		8035CBB629DC3FA100F03E02 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				8035CBB729DC3FAB00F03E02 /* NetoworkHelper.swift */,
-				8035CBB929DC407200F03E02 /* NetworkManager.swift */,
-			);
-			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

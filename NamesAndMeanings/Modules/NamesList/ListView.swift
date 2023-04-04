@@ -68,13 +68,10 @@ class ListView : UIViewController, AnyView {
             self.names = list
             self.tableView.reloadData()
         }
-       
     }
     
     func update(with error: HTTPError) {
-        DispatchQueue.main.async {
             print(error.rawValue)
-        }
     }
 
 }
@@ -82,16 +79,12 @@ extension ListView : UITableViewDelegate , UITableViewDataSource, UISearchBarDel
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
         if searchText.count > 1 {
-            presenter?.interactor?.fetchLetter(letter: searchText, searchType: .meaning)
+            presenter?.interactor?.fetchData(input: searchText, searchType: .meaning)
         }else {
-            presenter?.interactor?.fetchLetter(letter: searchText, searchType: .firstLetter)
+            presenter?.interactor?.fetchData(input: searchText, searchType: .firstLetter)
         }
-        
-        
     }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        <#code#>
-    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if names.isEmpty {
             return 1
@@ -99,6 +92,7 @@ extension ListView : UITableViewDelegate , UITableViewDataSource, UISearchBarDel
             return names.count
         }
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell",for: indexPath)
         var content = cell.defaultContentConfiguration()
@@ -107,7 +101,7 @@ extension ListView : UITableViewDelegate , UITableViewDataSource, UISearchBarDel
                 content.secondaryText = meaning
             }
             content.text = names[indexPath.row].name
-        }else {
+        } else {
             content.text = "Bir arama kelimesi girmediniz!".capitalized.uppercased()
         }
         cell.contentConfiguration = content

@@ -10,14 +10,14 @@ import Foundation
 protocol AnyInteractor {
     var presenter : AnyPresenter? {get set}
     
-    func fetchLetter(letter : String, searchType : BaseURLS)
+    func fetchData(input : String, searchType : BaseURLS)
 }
 
 class ListInteractor : AnyInteractor {
     var presenter: AnyPresenter?
     
-    func fetchLetter(letter : String, searchType: BaseURLS) {
-        NetworkManager.shared.request(url: searchType, input: letter, type: NameData.self, method: .get) { response in
+    func fetchData(input : String, searchType: BaseURLS) {
+        NetworkManager.shared.request(url: searchType, input: input, type: NameData.self, method: .get) { response in
             self.presenter?.interactorDidDownloadData(result: response)
         }
     }

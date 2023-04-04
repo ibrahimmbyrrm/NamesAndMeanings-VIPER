@@ -28,7 +28,7 @@ class ListPresenter : AnyPresenter {
         case .success(let nameList):
             view?.update(with: nameList.data)
         case .failure(let error):
-            print(error.localizedDescription)
+            view?.update(with: error)
         }
     }
     

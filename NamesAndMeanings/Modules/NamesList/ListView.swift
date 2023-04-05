@@ -38,19 +38,20 @@ class ListView : UIViewController, AnyView {
         tableView.delegate = self
         tableView.dataSource = self
         searchBar.delegate = self
-    }
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        searchBar.translatesAutoresizingMaskIntoConstraints = false
-        tableView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(searchBar)
         view.addSubview(tableView)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
         setUpConstraints()
-        
     }
     
     func setUpConstraints() {
+        searchBar.translatesAutoresizingMaskIntoConstraints = false
+        tableView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
+            
             searchBar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             searchBar.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             searchBar.trailingAnchor.constraint(equalTo: view.trailingAnchor),
@@ -61,6 +62,7 @@ class ListView : UIViewController, AnyView {
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
+    
     func update(with list: [Attributes]) {
         DispatchQueue.main.async {
             self.names = list
@@ -69,13 +71,12 @@ class ListView : UIViewController, AnyView {
     }
     
     func update(with error: HTTPError) {
-            print(error.rawValue)
+        self.callAlert(title: "HATA", message: error.rawValue)
     }
 
 }
 extension ListView : UITableViewDelegate , UITableViewDataSource, UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
         if searchText.count > 1 {
             presenter?.interactor?.fetchData(input: searchText, searchType: .meaning)
         }else {
@@ -92,10 +93,13 @@ extension ListView : UITableViewDelegate , UITableViewDataSource, UISearchBarDel
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        var routerInstance = DetailRouter.viewDidChanged()
-        var selectedSlug = names[indexPath.row].slug
-        DetailView.selected = selectedSlug
-        present(routerInstance.secondView!, animated: true)
+        if !names.isEmpty {
+            DetailView.selected = names[indexPath.row].slug
+            present(DetailRouter.viewDidChanged().secondView!, animated: true)
+        }else {
+            self.callAlert(title: "HATA", message: "Bir isim seçmelisiniz")
+        }
+       
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -107,7 +111,7 @@ extension ListView : UITableViewDelegate , UITableViewDataSource, UISearchBarDel
             }
             content.text = names[indexPath.row].name
         } else {
-            content.text = "Bir arama kelimesi girmediniz!".capitalized.uppercased()
+            content.text = "Bir arama kelimesi girmelisiniz!".capitalized.uppercased()
         }
         cell.contentConfiguration = content
         return cell

@@ -22,6 +22,8 @@
 		80CA955629DC7DE400E11D9F /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CA955529DC7DE400E11D9F /* DetailInteractor.swift */; };
 		80CA955829DC7DEB00E11D9F /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CA955729DC7DEB00E11D9F /* DetailPresenter.swift */; };
 		80CA955C29DC7E0C00E11D9F /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CA955B29DC7E0C00E11D9F /* DetailRouter.swift */; };
+		80CA955F29DDA39D00E11D9F /* VC+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CA955E29DDA39D00E11D9F /* VC+Alert.swift */; };
+		80CA956229DDA44000E11D9F /* UILabel+Configure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CA956129DDA44000E11D9F /* UILabel+Configure.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		80CA955529DC7DE400E11D9F /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
 		80CA955729DC7DEB00E11D9F /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		80CA955B29DC7E0C00E11D9F /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
+		80CA955E29DDA39D00E11D9F /* VC+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VC+Alert.swift"; sourceTree = "<group>"; };
+		80CA956129DDA44000E11D9F /* UILabel+Configure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Configure.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,7 @@
 		8035CB9229DC3C5C00F03E02 /* NamesAndMeanings */ = {
 			isa = PBXGroup;
 			children = (
+				80CA956029DDA42A00E11D9F /* Extensions */,
 				80CA955D29DC807300E11D9F /* Origin */,
 				8035CBB529DC3F9D00F03E02 /* Network Layer */,
 				8035CBA729DC3CA500F03E02 /* Modules */,
@@ -125,13 +130,22 @@
 		80CA955D29DC807300E11D9F /* Origin */ = {
 			isa = PBXGroup;
 			children = (
-				8035CBA129DC3C5D00F03E02 /* Info.plist */,
+				8035CB9329DC3C5C00F03E02 /* AppDelegate.swift */,
+				8035CB9529DC3C5C00F03E02 /* SceneDelegate.swift */,
 				8035CB9E29DC3C5D00F03E02 /* LaunchScreen.storyboard */,
 				8035CB9C29DC3C5D00F03E02 /* Assets.xcassets */,
-				8035CB9529DC3C5C00F03E02 /* SceneDelegate.swift */,
-				8035CB9329DC3C5C00F03E02 /* AppDelegate.swift */,
+				8035CBA129DC3C5D00F03E02 /* Info.plist */,
 			);
 			path = Origin;
+			sourceTree = "<group>";
+		};
+		80CA956029DDA42A00E11D9F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				80CA955E29DDA39D00E11D9F /* VC+Alert.swift */,
+				80CA956129DDA44000E11D9F /* UILabel+Configure.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,11 +221,13 @@
 				8035CBBA29DC407200F03E02 /* NetworkManager.swift in Sources */,
 				80CA955629DC7DE400E11D9F /* DetailInteractor.swift in Sources */,
 				8035CBB829DC3FAB00F03E02 /* NetoworkHelper.swift in Sources */,
+				80CA955F29DDA39D00E11D9F /* VC+Alert.swift in Sources */,
 				8035CBB229DC3CE200F03E02 /* ListEntity.swift in Sources */,
 				80CA955429DC7DDC00E11D9F /* DetailView.swift in Sources */,
 				80CA955C29DC7E0C00E11D9F /* DetailRouter.swift in Sources */,
 				8035CBB429DC3CE900F03E02 /* ListRouter.swift in Sources */,
 				8035CBB029DC3CD200F03E02 /* ListPresenter.swift in Sources */,
+				80CA956229DDA44000E11D9F /* UILabel+Configure.swift in Sources */,
 				8035CB9429DC3C5C00F03E02 /* AppDelegate.swift in Sources */,
 				8035CB9629DC3C5C00F03E02 /* SceneDelegate.swift in Sources */,
 				8035CBAE29DC3CCC00F03E02 /* ListInteractor.swift in Sources */,

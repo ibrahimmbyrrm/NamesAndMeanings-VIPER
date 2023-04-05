@@ -20,8 +20,6 @@ protocol AnyRouter {
 class ListRouter : AnyRouter {
     var entry: EntryPoint?
     
-    
-    
     static func startExecution() -> AnyRouter {
         let router = ListRouter()
         

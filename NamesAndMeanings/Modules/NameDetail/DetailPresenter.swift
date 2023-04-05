@@ -32,9 +32,5 @@ class DetailPresenter : AnyDetailPresenter {
         case .failure(let error):
             print(error.rawValue)
         }
-    }
-    
-
-    
-    
+    }  
 }

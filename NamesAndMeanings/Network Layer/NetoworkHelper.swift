@@ -28,6 +28,7 @@ struct NetworkHelper {
     static let shared = NetworkHelper()
     
     let headers = ["Authorization"     :
-                    "Bearer W79uqXoSBrPp2566ZvFFvOoIhVDnHuSkzIDOZ1jWIBQ3u8feQ5e7z4DGo3uK"]
+                    "Bearer \(ProcessInfo.processInfo.environment["API_KEY"]!)"]
     
 }
+
